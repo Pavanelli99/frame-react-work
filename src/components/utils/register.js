@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './styles.css';
 
-function Cadastro() {
+function Register({ showLogin }) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -14,7 +15,6 @@ function Cadastro() {
 
   return (
     <div>
-      <h2>Cadastro</h2>
       <form>
         <div>
           <label>Nome:</label>
@@ -40,12 +40,19 @@ function Cadastro() {
             onChange={(e) => setSenha(e.target.value)}
           />
         </div>
+        <br></br>
         <button type="button" onClick={handleCadastro}>
-          Cadastrar
+          Register
         </button>
+        <br></br>
+        {/* {showLogin && (
+          <button onClick={showLogin}>Go to login</button>
+        )} */}
+         <br/>
+        <button onClick={showLogin}>Go to login</button>
       </form>
     </div>
   );
 }
 
-export default Cadastro;
+export default Register;

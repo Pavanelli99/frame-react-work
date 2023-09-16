@@ -1,0 +1,75 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 600px;
+    height: 400px; /* Defina a largura desejada para o container */
+    text-align: center;
+    align-items: center; /* Centralize o conteúdo verticalmente */
+    justify-content: center; /* Centralize o conteúdo horizontalmente */
+  }
+  
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+    
+  form {
+    display: 'flex';
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: 100%;
+    margin: 0;
+  }
+  
+  input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Preencha a largura disponível */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; /* Preencha a largura disponível */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button.secondary {
+    background-color: #ccc;
+    margin-top: 10px;
+  }
+  
+  /* Adicione outras regras CSS conforme necessário */
+  

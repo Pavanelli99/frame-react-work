@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Login() {
+function Login({ showLogin }) { // Recebe a função showLogin como uma prop
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
@@ -11,29 +11,30 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form>
-        <div>
-          <label>Email:</label>
+    <div className="container">
+      <div className="login-form">
+        <h2>Register / Login </h2>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
-        </div>
-        <div>
-          <label>Senha:</label>
           <input
             type="password"
+            placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            required
           />
-        </div>
-        <button type="button" onClick={handleLogin}>
-          Login
-        </button>
-      </form>
+          <button type="submit">Login</button>
+        </form>
+        {showLogin && (
+          <button onClick={showLogin}>Register now</button>
+        )}
+      </div>
     </div>
   );
 }
